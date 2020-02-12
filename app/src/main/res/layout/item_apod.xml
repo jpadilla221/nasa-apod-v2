@@ -16,8 +16,10 @@
     app:layout_constraintEnd_toStartOf="@+id/title"
     app:layout_constraintHorizontal_weight="3"
     android:layout_marginEnd="@dimen/history_margin"
-    android:contentDescription= "@string/title_history"/>
-  
+    android:contentDescription= "@string/title_history"
+    android:scaleType="fitEnd"
+    android:adjustViewBounds="false"/>
+
 
   <TextView
     android:id="@+id/title"
