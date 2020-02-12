@@ -15,7 +15,9 @@
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toStartOf="@+id/title"
     app:layout_constraintHorizontal_weight="3"
-    android:layout_marginEnd="@dimen/history_margin"/>
+    android:layout_marginEnd="@dimen/history_margin"
+    android:contentDescription= "@string/title_history"/>
+  
 
   <TextView
     android:id="@+id/title"
