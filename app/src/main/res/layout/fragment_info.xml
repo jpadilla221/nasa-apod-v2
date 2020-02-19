@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  xmlns:tools="http://schemas.android.com/tools"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   tools:context=".controller.InfoFragment">
 
@@ -19,6 +20,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/date_label"
+      style="@style/LinkLabel"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintStart_toStartOf="parent"/>
 
@@ -28,13 +30,14 @@
       android:layout_height="wrap_content"
       android:textIsSelectable="true"
       app:layout_constraintStart_toEndOf="@id/date_label"
-      app:layout_constraintBaseline_toBaselineOf="@+id/date_label"/>
+      app:layout_constraintBaseline_toBaselineOf="@id/date_label"/>
 
     <TextView
       android:id="@+id/description"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:textIsSelectable="true"
+      style="@style/BodyText"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintTop_toBottomOf="@id/date"/>
@@ -44,6 +47,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/web_url_label"
+      style="@style/LinkLabel"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/description"/>
 
@@ -52,6 +56,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/url_label"
+      style="@style/LinkLabel"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/web_url"/>
 
@@ -60,6 +65,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/hd_url_label"
+      style="@style/LinkLabel"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/url"/>
 
@@ -73,31 +79,33 @@
 
     <TextView
       android:id="@+id/web_url"
+      android:autoLink="web"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:textIsSelectable="true"
-      app:layout_constraintStart_toStartOf="@+id/label_barrier"
+      app:layout_constraintStart_toStartOf="@id/label_barrier"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintBaseline_toBaselineOf="@id/web_url_label"/>
 
-   <TextView
-     android:id="@+id/url"
-     android:layout_width="0dp"
-     android:layout_height="wrap_content"
-     android:textIsSelectable="true"
-     app:layout_constraintStart_toStartOf="@+id/label_barrier"
-     app:layout_constraintEnd_toEndOf="parent"
-     app:layout_constraintBaseline_toBaselineOf="@+id/url_label"/>
-
     <TextView
-      android:id="@+id/hd_url"
+      android:id="@+id/url"
+      android:autoLink="web"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:textIsSelectable="true"
-      app:layout_constraintStart_toStartOf="@+id/label_barrier"
+      app:layout_constraintStart_toStartOf="@id/label_barrier"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintBaseline_toBaselineOf="@+id/hd_url_label"/>
+      app:layout_constraintBaseline_toBaselineOf="@id/url_label"/>
 
+    <TextView
+      android:id="@+id/hd_url"
+      android:autoLink="web"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:textIsSelectable="true"
+      app:layout_constraintStart_toStartOf="@id/label_barrier"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBaseline_toBaselineOf="@id/hd_url_label"/>
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 
